@@ -10,7 +10,7 @@ Figma Design
 
 - Figma Link: [Frontend Assignment Figma](https://www.figma.com/design/j7VAQnzrL435tnYiQP1bac/React-Native-Assignment?node-id=0-1&t=Ido2BfnGCEFnXvPT-1) (Adapt as needed for the party menu app).
 
-![ui](images/preview.png)
+![ui](/images/preview.png)
 
 ## Features
 
@@ -68,7 +68,7 @@ party-menu-app/
    npm run build
    ```
 
-### Tools and Libraries Used
+## Tools and Libraries Used
 
 - **React:** Frontend framework for building the user interface.
 - **Tailwind CSS:** Utility-first CSS framework for responsive and modern styling.

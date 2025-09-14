@@ -10,7 +10,7 @@ Figma Design
 
 - Figma Link: [Frontend Assignment Figma](https://www.figma.com/design/j7VAQnzrL435tnYiQP1bac/React-Native-Assignment?node-id=0-1&t=Ido2BfnGCEFnXvPT-1) (Adapt as needed for the party menu app).
 
-![ui](/images/preview.png)
+![ui](public/images/preview.png)
 
 ## Features
 

@@ -86,7 +86,7 @@ party-menu-app/
 - **View Selection Summary**: Check the count of selected dishes in each category tab and the total at the bottom.
 
 
-### Improvements with More Time and Challenges Faced with Solutions
+## Improvements with More Time and Challenges Faced with Solutions
 
 - **Advanced Filtering:** Implement multi-category selection and sorting by popularity or name.
 
@@ -98,7 +98,7 @@ party-menu-app/
 - **State Management Across Components:** Handling selected dishes, filters, and counts without a global store.\
   **Solution:** Used React hooks (useState) in the App component and passed props down, keeping logic centralized.
 
-### Assignment Completion Checklist
+## Assignment Completion Checklist
 
 Click to view
 

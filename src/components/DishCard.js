@@ -1,4 +1,5 @@
 import React from "react";
+import { ReactComponent as Ingredient } from "../assets/icons/ingredient_1.svg"
 
 const DishCard = ({ dish, isSelected, onToggleSelect, onDishClick, onViewIngredients }) => {
   return (
@@ -32,7 +33,7 @@ const DishCard = ({ dish, isSelected, onToggleSelect, onDishClick, onViewIngredi
               }}
               className="flex items-center gap-2 text-orange-600 text-sm font-medium"
             >
-              🥘 <span>Ingredient</span>
+              <Ingredient className="w-5 h-5" /><span>Ingredient</span>
             </button>
           </div>
           <div className="relative inline-flex flex-col justify-center items-center">

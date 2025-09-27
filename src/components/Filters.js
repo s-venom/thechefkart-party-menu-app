@@ -97,7 +97,7 @@ const Filters = ({
                 : "bg-white text-gray-700 border border-gray-300 hover:bg-gray-50"
             }`}
           >
-            {tab.label} {dishCounts[tab.key] > 0 && `${dishCounts[tab.key]}`} {/* dishCounts[tab.key]*/}
+            {tab.label} {dishCounts[tab.key]} {/* dishCounts[tab.key] > 0 && `${dishCounts[tab.key]}` */}
           </button>
         ))}
       </div>

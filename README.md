@@ -12,6 +12,11 @@ Figma Design
 
 ![ui](public/images/preview.png)
 
+### Video Preview :
+
+<video src="public/images/preview-video.mp4" autoplay loop muted></video>
+
+
 ## Features
 
 - **Category Tabs**: Select from four meal types (Starter, Main Course, Dessert, Sides) to view dishes in each category.
@@ -40,6 +45,60 @@ party-menu-app/
     ├── App.css                 # Tailwind CSS configuration
     └── App.js                  # Main app component with state management
 ```
+
+## Mock JSON Data Structure
+
+<details>
+<summary>Click here</summary>
+<br/>
+
+```
+[
+  {
+    "categoryId": 1,
+    "mealType": "STARTER",
+    "type": "VEG",
+    "description": "Paneer cubes in spicy onion gravy with onions and capsicum cubes.",
+    "image": "https://www.cubesnjuliennes.com/wp-content/uploads/2020/03/Best-Kadai-Paneer-Recipe.jpg",
+    "category": {
+      "id": 1,
+      "name": "North Indian",
+      "image": "https://storage.googleapis.com/chefkartimages/customer_app_assets/star_chef/north_indian.png",
+      "isRecommendedForMealSuggestion": true
+    },
+    "dishType": "APPETIZER",
+    "forChefit": true,
+    "forParty": true,
+    "nameHi": "",
+    "nameBn": "",
+    "id": 1,
+    "name": "Kadhai Paneer 1",
+    "ingredients": [
+      {
+        "name": "Paneer",
+        "quantity": "250g"
+      },
+      {
+        "name": "Onions",
+        "quantity": "2"
+      },
+      {
+        "name": "Capsicum",
+        "quantity": "2"
+      },
+      {
+        "name": "Tomatoes",
+        "quantity": "3"
+      },
+      {
+        "name": "Spices",
+        "quantity": "to taste"
+      }
+    ]
+  }, ...
+]
+```
+</details>
 
 ## Setup Instructions
 
@@ -99,8 +158,6 @@ party-menu-app/
   **Solution:** Used React hooks (useState) in the App component and passed props down, keeping logic centralized.
 
 ## Assignment Completion Checklist
-
-Click to view
 
 - The completion Checklist includes the below-mentioned points:
   - [x] I have completed all the functionalities asked in the assignment.

@@ -13,18 +13,20 @@ const DishDetailPopup = ({ dish, isSelected, onToggleSelect, onViewIngredients, 
   return (
     <div className="w-full max-w-md mx-auto fixed inset-0 z-10 flex items-end">
       {/* Backdrop */}
-      <div className="absolute inset-0 bg-black/30 backdrop-blur-[1px]" onClick={handleClose} />
+      <div className="absolute inset-0 bg-black/50 backdrop-blur-[1px]" onClick={handleClose} />
 
       {/* Popup */}
       <div
-        className={`relative w-full bg-white rounded-t-3xl transition-transform duration-300 ${
+        className={`relative pb-4 w-full bg-white rounded-t-3xl transition-transform duration-300 ${
           isVisible ? "translate-y-0" : "translate-y-full"
         }`}
       >
         {/* Handle bar */}
+        {/* 
         <div className="flex justify-center pt-3 pb-2">
           <div className="w-12 h-1 bg-gray-300 rounded-full" />
         </div>
+        */}
 
         <div className="p-6 pb-8">
           {/* Dish Image */}
@@ -49,7 +51,7 @@ const DishDetailPopup = ({ dish, isSelected, onToggleSelect, onViewIngredients, 
             {/* Action Buttons */}
             <button
               onClick={() => onToggleSelect(dish.id)}
-              className={` w-[84px] h-[36px] p2 bg-white rounded-lg shadow-[0px_4px_12px_4px_rgba(28,28,28,0.15)] text-sm font-bold transition-colors ${
+              className={` w-[84px] h-[36px] p2 bg-white rounded-lg shadow-[0px_4px_12px_4px_rgba(28,28,28,0.15)] text-md font-bold transition-colors ${
                 isSelected
                   ? "bg-white text-orange-600"
                 : "bg-white text-green-600"
@@ -60,13 +62,8 @@ const DishDetailPopup = ({ dish, isSelected, onToggleSelect, onViewIngredients, 
           </div>
 
           {/* Category */}
-          <p className="text-gray-600 text-sm font-bold capitalize mb-2">
-            {dish.mealType
-                .toLowerCase()
-                .split(' ')
-                .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-                .join(' ')
-            }
+          <p className="text-black-600 text-sm font-bold capitalize mb-2">
+            {dish.category.name}
         </p>
 
           {/* Description */}

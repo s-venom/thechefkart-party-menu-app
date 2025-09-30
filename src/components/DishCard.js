@@ -56,9 +56,10 @@ const DishCard = ({ dish, isSelected, onToggleSelect, onDishClick, onViewIngredi
           </div>
         </div>
       </div>
+      {/* Horizontal bar */}
       <div className="flex justify-center">
-          <div className="w-90 h-[2.5px] bg-gray-100 rounded-full" />
-        </div>
+        <div className="w-100 h-[1.5px] bg-gray-100 rounded-full" />
+      </div>
     </>
     
   );

@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { ReactComponent as Search } from "../assets/icons/search.svg"
-import { categories } from "../data/mockDishes";
+// import { categories } from "../data/mockDishes";
 
 const ToggleSwitch = ({ checked, onChange, type }) => {
   const VEG_COLOR = '#539A64';
@@ -15,7 +15,7 @@ const ToggleSwitch = ({ checked, onChange, type }) => {
 
   return (
       <label htmlFor={`custom-toggle-${type}`} className="flex items-center cursor-pointer">
-          <div className="px-2.25 py-3 border-2 border-[#EEEEEE] bg-white rounded-full">
+          <div className="px-2.25 py-2.5 border-2 border-[#EEEEEE] bg-white rounded-full">
               <input
                   type="checkbox"
                   id={`custom-toggle-${type}`}
@@ -51,6 +51,7 @@ const Filters = ({
     { key: "SIDES", label: "Sides" },
   ];
 
+  /*
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const toggleCategory = (categoryId) => {
@@ -60,6 +61,7 @@ const Filters = ({
       onCategoryDropdownChange([...selectedCategories, categoryId]);
     }
   };
+  */
 
   return (
     <div>
@@ -127,6 +129,7 @@ const Filters = ({
       </div>
 
       {/* Category Dropdown */}
+      {/*
       <div className="relative w-full mb-6 px-4 hidden">
         <button
           onClick={() => setIsDropdownOpen(!isDropdownOpen)}
@@ -168,6 +171,7 @@ const Filters = ({
           </>
         )}
       </div>
+      */}
     </div>
   );
 };

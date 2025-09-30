@@ -14,6 +14,8 @@ Figma Design
 
 ### Video Preview :
 
+[view the video directly on Loom](https://www.loom.com/share/1f680894f740412daa0874e936a5e64f)
+
 <video src="public/images/preview-video.mp4" autoplay loop muted></video>
 
 

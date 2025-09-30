@@ -29,7 +29,7 @@ const DishDetailPopup = ({ dish, isSelected, onToggleSelect, onViewIngredients, 
         <div className="p-6 pb-8">
           {/* Dish Image */}
           <div className="w-full h-48 relative rounded-2xl overflow-hidden mb-4">
-            <img src={dish.image || "/placeholder.svg"} alt={dish.name} className="w-full h-full object-cover" />
+            <img src={dish.image || "/images/placeholder.svg"} alt={dish.name} className="w-full h-full object-cover" />
           </div>
 
           {/* Dish Info */}

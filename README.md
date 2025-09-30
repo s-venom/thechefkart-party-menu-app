@@ -1,70 +1,132 @@
-# Getting Started with Create React App
+# Party Menu Selection App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Objective
 
-## Available Scripts
+The objective of this assignment is to develop a web application that allows users to select dishes for their party from a categorized menu. The app demonstrates UI design skills, logical thinking, component architecture, navigation, filtering, and list rendering in ReactJS. It provides an intuitive interface for browsing dishes, applying searches and filters, viewing details, and managing selections, ensuring a seamless user experience in party menu planning.
 
-In the project directory, you can run:
+### Resources
 
-### `npm start`
+Figma Design
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Figma Link: [Frontend Assignment Figma](https://www.figma.com/design/j7VAQnzrL435tnYiQP1bac/React-Native-Assignment?node-id=0-1&t=Ido2BfnGCEFnXvPT-1) (Adapt as needed for the party menu app).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+![ui](public/images/preview.png)
 
-### `npm test`
+## Features
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Category Tabs**: Select from four meal types (Starter, Main Course, Dessert, Sides) to view dishes in each category.
+- **Search Functionality**: Search dishes by name (case-insensitive) within the selected meal category.
+- **Veg/Non-Veg Filters**: Toggle between vegetarian and non-vegetarian dishes, updating the dish list instantly.
+- **Dish Listing**: Displays dish cards with name, short description, image, and buttons to add/remove or view ingredients.
+- **Add/Remove Functionality**: Add or remove dishes, with visual indicators for selected dishes and a count in each category tab.
+- **Selection Summary**: Shows the number of selected dishes per category and a total count at the bottom.
+- **Dish Detail Popup**: Clicking a dish opens a popup with full details, including an option to view ingredients.
+- **Ingredient Modal**: Displays a full-screen view of a dish’s ingredients with quantities (mock data).
+- **Smooth Animations**: The dish detail popup slides up and down smoothly (300ms) for both opening and closing.
 
-### `npm run build`
+## Project Structure
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+party-menu-app/
+└── src/
+    ├── components/
+    │   ├── DishCard.js         # Renders individual dish cards
+    │   ├── DishDetailPopup.js  # Popup for dish details with add/remove and ingredient buttons
+    │   ├── DishList.js         # Groups dishes by category and renders dish cards
+    │   ├── Filters.js          # Handles category tabs, search, veg/non-veg filters, and category dropdown
+    │   └── IngredientModal.js  # Full-screen modal for viewing dish ingredients
+    ├── data/
+    │   └── mockDishes.js       # Mock data for dishes and categories
+    ├── App.css                 # Tailwind CSS configuration
+    └── App.js                  # Main app component with state management
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Setup Instructions
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. **Clone the Repository**:
+   ```bash
+   git clone <repository-url>
+   cd party-menu-app
+   ```
 
-### `npm run eject`
+2. **Install Dependencies**:
+   Ensure you have Node.js installed. Then, run:
+   ```bash
+   npm install
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. **Run the Development Server**:
+   Start the app with:
+   ```bash
+   npm start
+   ```
+   The app will be available at `http://localhost:3000`.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. **Build for Production**:
+   To create a production build:
+   ```bash
+   npm run build
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Tools and Libraries Used
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **React:** Frontend framework for building the user interface.
+- **Tailwind CSS:** Utility-first CSS framework for responsive and modern styling.
+- **React Hooks:** For state and lifecycle management (e.g., useState, useEffect).
 
-## Learn More
+## Usage
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- **Select a Category**: Use the tabs (Starter, Main Course, Dessert, Sides) to view dishes in that category.
+- **Search Dishes**: Type in the search bar to filter dishes by name within the selected category.
+- **Filter by Type**: Toggle the Veg/Non-Veg buttons to filter dishes by dietary preference.
+- **Select Categories**: Use the dropdown to filter dishes by specific cuisines (e.g., Italian, Indian).
+- **Add/Remove Dishes**: Click "Add +" or "Remove" on a dish card or in the detail popup to update selections.
+- **View Dish Details**: Click a dish card to open a popup with full details and an "Ingredient" button.
+- **View Ingredients**: Click the "Ingredient" button in a dish card or popup to open a full-screen modal with ingredient details.
+- **View Selection Summary**: Check the count of selected dishes in each category tab and the total at the bottom.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+## Improvements with More Time and Challenges Faced with Solutions
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- **Advanced Filtering:** Implement multi-category selection and sorting by popularity or name.
 
-### Analyzing the Bundle Size
+- **Real Images and Data:** Integrate with a cloud storage for dish images and expand mock data with more varieties.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+- **Matching Reference UI:** Adapting the provided mock design and JSON data to React components.\
+  **Solution:** Broke down UI into reusable components (e.g., DishCard, Filters) and used Tailwind for precise styling, ensuring responsiveness and visual consistency.
 
-### Making a Progressive Web App
+- **State Management Across Components:** Handling selected dishes, filters, and counts without a global store.\
+  **Solution:** Used React hooks (useState) in the App component and passed props down, keeping logic centralized.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Assignment Completion Checklist
 
-### Advanced Configuration
+Click to view
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- The completion Checklist includes the below-mentioned points:
+  - [x] I have completed all the functionalities asked in the assignment.
 
-### Deployment
+  - [x] I have used only the resources (Frameworks, Design files, APIs, third-party packages) mentioned in the assignment.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+  - [x] I have completed the assignment **ON TIME** (by 05:10 PM IST on Sunday, September 14, 2025).
+- **Specific Checklist**:
+  - [x] Implemented category tabs with dish listing and selection counts.
 
-### `npm run build` fails to minify
+  - [x] Added search and veg/non-veg filters with immediate updates.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+  - [x] Created add/remove functionality with visual markers.
+
+  - [x] Developed dish detail popup and ingredient modal with smooth animations.
+
+  - [x] Used mock data for dishes and ingredients.
+
+  - [x] Ensured responsive design across device sizes as Mobile view is primary.
+
+  - [x] Ensured pixel perfect UI design implementation translating Figma to Code(ReactJS).
+
+  
+### Important Note
+
+- No data persistence or local storage is implemented; selections reset on refresh.
+- Navigation uses state management instead of React Navigation, as the app is single-page with modals/popups.
+- Mock images use placeholders; replace with actual URLs in production.
+
